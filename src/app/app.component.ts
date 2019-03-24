@@ -10,6 +10,8 @@ export class AppComponent {
   users = [];
   error: any;
 
+  title: String = 'User list made with stencil.js and Angular';
+
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {

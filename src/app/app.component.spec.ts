@@ -29,9 +29,9 @@ describe('AppComponent', () => {
 
   it('should render the next title: User list made with stencil.js and Angular', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('User list made with stencil.js and Angular');
+    let app = fixture.debugElement.componentInstance;
+    const title = 'User list made with stencil.js and Angular';
+    expect(app.title).toEqual(title);
   });
 
   it('should render the <user-list /> component', () => {
